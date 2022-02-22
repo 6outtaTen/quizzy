@@ -1,38 +1,712 @@
 .App {
   text-align: center;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* ======================================================= Button Styling ======================================================= */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navigate-to-basic-info, .save-quiz, .discard-quiz, .new-quiz, .proceed-btn {
+  
+  transform: translate(-50% , -50%);
+  background-color: #6b5b95;
+  border: none;
+  border-radius: 25px;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* ======================================================= Navbar styling ======================================================= */
+
+.navbar {
+  background-color: #12130f;
+  border-bottom: 0.025rem solid #282e3e;
+  width: 100%;
+  height: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-title, .navbar-logged-in-as {
+  color: white;
+  
+  transform: translate(-50% , -50%);
+}
+
+.navbar-title {
+  left: 4%;
+  top: 3.5%;
+  font-size: 40px;
+}
+
+.navbar-logged-in-as {
+  left: 83%;
+  top: 4%;
+  font-size: 30px;
+}
+
+.profile-icon {
+  
+  transform: translate(-50% , -50%);
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  left: 97%;
+  top: 4%;
+  cursor: pointer
+}
+
+
+/* ======================================================= Login Page styling ======================================================= */
+
+.login-rect, .register-rect {
+  
+  width: 50%;
+  height: 100%;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50% , -50%);
+  background-color: #12130f;
+}
+
+.login-app-title {
+  
+  transform: translate(-50% , -50%);
+  left: 25%;
+  top: 45%;
+  font-size: 150px;
+}
+
+.login-title, .register-title {
+  transform: translate(-50% , -50%);
+  
+  left: 50%;
+  top: 40%;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+}
+
+.username-label {
+  color: white;
+  
+  width: 40px;
+  height: 10px;
+  top: 33%;
+  left: 8.6%;
+  transform: translate(-50% , -50%); 
+}
+
+.username-field, .usernameReg-field {
+  transform: translate(-50% , -50%);
+  
+  width: 55%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  left: 50%;
+  top: 50%;
+}
+
+.create-account-button {
+  color: #66707d;
+  
+  text-decoration: none;
+  width: 14%;
+  border-bottom: 1.5px solid #6b5b95;
+  padding-bottom: 5px;
+  left: 615px;
+  cursor: hand;
+  top: 620px;
+}
+
+.go-to-login {
+  color: #66707d;
+  
+  text-decoration: none;
+  width: 30%;
+  border-bottom: 1.5px solid #6b5b95;
+  padding-bottom: 5px;
+  left: 380px;
+  cursor: hand;
+  top: 340px;
+}
+
+.password-field, .passwordReg-field {
+  width: 55%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  transform: translate(-50% , -50%);
+  
+  left: 50%;
+  top: 57%;
+}
+
+.username-field::placeholder, .passwordReg-field::placeholder, .password-field::placeholder, .usernameReg-field::placeholder {
+  color: #616e7f;
+}
+
+
+.login-button {
+  background-color: #6b5b95;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 15px 70px;
+  font-size: 0.8em;
+  font-weight: 500;;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  
+  left: 22%;
+  top: 61%;
+}
+
+.register-button {
+  background-color: #6b5b95;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 15px 70px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-left: 35px;
+  width: 40px;
+}
+
+.password-confirm {
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+
+/* ======================================================================= Dashboard styling =======================================================================*/
+
+.browse-title {
+  color: #12130f;
+  font-size: 50px;
+  
+  transform: translate(-50% , -50%);
+  left: 25%;
+  top: 20%;
+}
+
+.vertical-divider {
+  background-color: #12130f;
+  
+  transform: translate(-50% , -50%);
+  height: 160%;
+  top: 20%;
+  left: 50%;
+  width: 0.25%;
+}
+
+.horizontal-divider {
+  background-color: #12130f;
+  
+  transform: translate(-50% , -50%);
+  height: 0.55%;
+  top: 50%;
+  left: 75%;
+  width: 50%;
+}
+
+.my-quizzes-title {
+  color: #12130f;
+  font-size: 50px;
+  
+  transform: translate(-50% , -50%);
+  left: 75%;
+  top: 20%;
+}
+
+.create-quiz-title {
+  color: #12130f;
+  font-size: 50px;
+  
+  transform: translate(-50% , -50%);
+  left: 75%;
+  top: 63%;
+}
+
+.create-quiz-button {
+  
+  transform: translate(-50% , -50%);
+  left: 75%;
+  top: 80%;
+  width: 10%;
+  height: 10%;
+  font-size: 62px;;
+  background-color: #12130f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.create-quiz-button:hover {
+  background-color: #21221c;
+}
+
+.browse-rect {
+  
+  transform: translate(-50% , -50%);
+  background-color: #12130f;
+  width: 30%;
+  height: 60%;
+  left: 25%;
+  top: 60%;
+  border-radius: 25px;
+}
+
+.browse-input {
+  width: 55%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #6b5b95;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  transform: translate(-50% , -50%);
+  
+  left: 50%;
+  top: 10%;
+}
+
+.browse-input::placeholder {
+  color: #616e7f;
+}
+
+.res-hint {
+  transform: translate(-50% , -50%);
+  
+  color: #616e7f;
+  left: 50%;
+  top: 45%;
+  font-size: 25px;
+}
+
+/*======================================================================= QuizView styling =======================================================================*/
+
+.card {
+  width: 300px;
+  flex: 0 0 auto;         
+  display: flex;          
+  flex-direction: column; 
+  
+  overflow-x: auto;
+}
+
+.cards-list {
+  position: relative;
+  left: 75%;
+  top: 38%;
+  height: 200px;
+  transform: translate(-50% , -50%);
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.card-rect {
+  background-color: #12130f;
+  width: 300px;
+  height: 140px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card-title {
+  color: white;
+  
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 27%;
+  text-align: left;
+}
+
+.card-image {
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  
+  transform: translate(-50%, -50%);
+  left: 90%;
+  top: 10%;
+}
+
+.card-description {
+  color: #616e7f;
+  font-size: 14px;
+  
+  transform: translate(-50%, -50%);
+  left: 36.5%;
+  top: 40%;
+  text-align: left;
+}
+
+/*=================================================================== Create new quiz page styling ===================================================================*/
+
+.quiz-info-rect {
+  
+  transform: translate(-50% , -50%);
+  background-color: #21252B;
+  width: 600px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  border-radius: 25px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.quiz-info-title {
+  
+  transform: translate(-50% , -50%);
+  color: white;
+  top: 7%;
+  left: 50%;
+  font-size: 38px;
+}
+
+.new-quiz-title-label {
+  
+  transform: translate(-50%, -50%);
+  color: white;
+  left: 20%;
+  top: 30%;
+  font-size: 22px;
+
+}
+
+.new-quiz-title {
+  
+  transform: translate(-50%, -50%);
+  top: 30.5%;
+  left: 52%;
+  width: 40%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.new-quiz-description {
+  
+  transform: translate(-50%, -50%);
+  top: 54%;
+  left: 53%;
+  width: 80%;
+  height: 10%;
+  resize: none;
+  color: white;
+  border: 1px solid #445366;
+  outline: none;
+}
+
+.new-quiz-title::placeholder {
+  color: gray;
+}
+
+.new-quiz-desc-label {
+  
+  transform: translate(-50%, -50%);
+  color: white;
+  left: 26%;
+  top: 44%;
+  font-size: 22px;
+}
+
+.proceed-btn {
+  
+  transform: translate(-50%, -50%);
+  left: 87%;
+  top: 90%;
+  width: 80px;
+  height: 30px;
+}
+
+/* ======================================================= Add Questions Page styling ======================================================= */
+
+.add-questions-rect {
+  
+  transform: translate(-50% , -50%);
+  background-color: #21252B;
+  width: 600px;
+  height: 800px;
+  left: 20%;
+  top: 55%;
+  border-radius: 25px;
+}
+
+.add-questions-title {
+  color: white;
+  
+  transform: translate(-50% , -50%);
+  left: 50%;
+  top: 5%;
+  font-size: 40px;
+}
+
+.add-question-text {
+  color: white;
+  
+  transform: translate(-50% , -50%);
+  top: 18%;
+  left: 12%;
+  font-size: 22px;
+}
+
+/* ============================================================================================================================================== */
+
+.answer1-text, .answer2-text, .answer3-text, .answer4-text {
+  color: white;
+  
+  transform: translate(-50% , -50%);
+  left: 12.5%;
+  font-size: 22px;
+}
+
+.answer1-text {
+  top: 30%;
+}
+
+.answer2-text {
+  top: 40%;
+}
+
+.answer3-text {
+  top: 50%;
+}
+
+.answer4-text {
+  top: 60%;
+}
+/* ============================================================================================================================================== */
+
+.question {
+  
+  transform: translate(-50% , -50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  width: 65%;
+  left: 55%;
+  top: 18.25%;
+}
+/* ============================================================================================================================================== */
+.answer1, .answer2, .answer3, .answer4 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  
+  transform: translate(-50% , -50%);
+  width: 65%;
+  left: 55%;
+}
+
+.answer1 {
+  top: 30.2%;
+}
+
+.answer2 {
+  top: 40%;
+}
+
+.answer3 {
+  top: 50%;
+}
+
+.answer4 {
+  top: 60%;
+}
+/* ============================================================================================================================================== */
+.correct-answer-text {
+  color: white;
+  
+  transform: translate(-50% , -50%);
+  left: 17.5%;
+  top: 72%;
+  font-size: 22px;
+}
+
+.correct-answer {
+  
+  transform: translate(-50% , -50%);
+  top: 72.25%;
+  left: 53%;
+  width: 40%;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+  background-color: #ffffff;
+}
+
+.add-question-btn {
+  
+  transform: translate(-50% , -50%);
+  background-color: #6b5b95;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  width: 40%;
+  height: 7%;
+  cursor: pointer;
+  left: 50%;
+  top: 90%;
+}
+
+/* ======================================================= Quiz Preview styling ======================================================= */
+
+.quiz-preview-rect {
+  
+  transform: translate(-50% , -50%);
+  background-color: #21252B;
+  width: 1100px;
+  height: 800px;
+  left: 200%;
+  top: 50%;
+  border-radius: 25px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.quiz-preview-title {
+  color: white;
+  
+  transform: translate(-50% , -50%);
+  left: 50%;
+  top: 5%;
+  font-size: 40px;
+}
+
+.question-preview {
+  color: white;
+  
+  transform: translate(-50% , -50%);
+  left: 26%;
+  font-size: 26px;
+  overflow: hidden;
+}
+
+/* ============================================================================================================================================== */
+.answer1-radio, .answer2-radio, .answer3-radio, .answer4-radio {
+  color: white;
+  
+  transform: translate(-50% , -50%);
+  left: 7%;
+}
+
+.answer1-radio {
+  top: 30%;
+}
+
+.answer2-radio {
+  top: 40%;
+}
+
+.answer3-radio {
+  top: 50%;
+}
+
+.answer4-radio {
+  top: 60%;
+}
+/* ============================================================================================================================================== */
+
+.label-for-answer1, .label-for-answer2, .label-for-answer3, .label-for-answer4 {
+  color: white;
+  
+  margin-left: 10% ;
+}
+
+.label-for-answer1 {
+  top: 27%;
+}
+
+.label-for-answer2 {
+  top: 37%;
+}
+
+.label-for-answer3 {
+  top: 47%;
+}
+
+.label-for-answer4 {
+  top: 57%;
+}
+/* ============================================================================================================================================== */
+
+.questions-display-preview {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.question-card {
+  margin-top: 120px;
+  width: 100%;
+  height: 300px;
+  position: relative;   
+  display: flex;
+  flex: auto 0 0;  
+}
+
+.navigate-to-basic-info {
+  width: 12%;
+  height: 5%;
+  left: 25%;
+  top: 5.5%;
+}
+
+.save-quiz {
+  width: 12%;
+  height: 5%;
+  left: 50%;
+  top: 5.5%;
+}
+
+.discard-quiz {
+  width: 12%;
+  height: 5%;
+  left: 37.5%;
+  top: 5.5%;
 }
