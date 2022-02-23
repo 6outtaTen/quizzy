@@ -204,7 +204,7 @@
 
 /* ======================================================================= Dashboard styling =======================================================================*/
 
-.browse-title {
+/* .browse-title {
   color: #12130f;
   font-size: 50px;
   
@@ -308,11 +308,11 @@
   left: 50%;
   top: 45%;
   font-size: 25px;
-}
+} */
 
 /*======================================================================= QuizView styling =======================================================================*/
 
-.card {
+/* .card {
   width: 300px;
   flex: 0 0 auto;         
   display: flex;          
@@ -368,7 +368,7 @@
   left: 36.5%;
   top: 40%;
   text-align: left;
-}
+} */
 
 /*=================================================================== Create new quiz page styling ===================================================================*/
 
@@ -488,7 +488,7 @@
 
 /* ============================================================================================================================================== */
 
-.answer1-text, .answer2-text, .answer3-text, .answer4-text {
+/* .answer1-text, .answer2-text, .answer3-text, .answer4-text {
   color: white;
   
   transform: translate(-50% , -50%);
@@ -510,10 +510,10 @@
 
 .answer4-text {
   top: 60%;
-}
+} */
 /* ============================================================================================================================================== */
 
-.question {
+/* .question {
   
   transform: translate(-50% , -50%);
   background-color: transparent;
@@ -526,9 +526,9 @@
   width: 65%;
   left: 55%;
   top: 18.25%;
-}
+} */
 /* ============================================================================================================================================== */
-.answer1, .answer2, .answer3, .answer4 {
+/* .answer1, .answer2, .answer3, .answer4 {
   background-color: transparent;
   border: none;
   color: white;
@@ -556,9 +556,9 @@
 
 .answer4 {
   top: 60%;
-}
+} */
 /* ============================================================================================================================================== */
-.correct-answer-text {
+/* .correct-answer-text {
   color: white;
   
   transform: translate(-50% , -50%);
@@ -591,11 +591,11 @@
   cursor: pointer;
   left: 50%;
   top: 90%;
-}
+} */
 
 /* ======================================================= Quiz Preview styling ======================================================= */
 
-.quiz-preview-rect {
+/* .quiz-preview-rect {
   
   transform: translate(-50% , -50%);
   background-color: #21252B;
@@ -625,10 +625,10 @@
   left: 26%;
   font-size: 26px;
   overflow: hidden;
-}
+} */
 
 /* ============================================================================================================================================== */
-.answer1-radio, .answer2-radio, .answer3-radio, .answer4-radio {
+/* .answer1-radio, .answer2-radio, .answer3-radio, .answer4-radio {
   color: white;
   
   transform: translate(-50% , -50%);
@@ -649,10 +649,10 @@
 
 .answer4-radio {
   top: 60%;
-}
+} */
 /* ============================================================================================================================================== */
 
-.label-for-answer1, .label-for-answer2, .label-for-answer3, .label-for-answer4 {
+/* .label-for-answer1, .label-for-answer2, .label-for-answer3, .label-for-answer4 {
   color: white;
   
   margin-left: 10% ;
@@ -672,10 +672,10 @@
 
 .label-for-answer4 {
   top: 57%;
-}
+} */
 /* ============================================================================================================================================== */
 
-.questions-display-preview {
+/* .questions-display-preview {
   display: flex;
   flex-wrap: wrap;
   overflow-x: hidden;
@@ -709,4 +709,4 @@
   height: 5%;
   left: 37.5%;
   top: 5.5%;
-}
+} */

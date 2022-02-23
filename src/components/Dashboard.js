@@ -10,20 +10,20 @@ export default function Dashboard(props) {
     const {currentUser} = useAuth()
 
     return (
-        <div>
+        <div name="container" className="flex flex-wrap items-center">
             <Navbar />
 
-            <div className="browse">
-                <div className="browse-title">Browse</div>
+            {/* <div name="container" className="flex flex-wrap h-full items-center"> */}
+            <div className="flex text-center justify-center ml-[230px] mt-[70px]">
+                <div className="text-[50px]">Browse</div>
                 <Browse />
             </div>
 
-            <div className="vertical-divider" />
-            <MyQuizzes />
+            <div className="w-[5px] h-[903px] ml-[210px] bg: bg-special-black" />
+            {/* <MyQuizzes /> */}
 
             <div className="horizontal-divider" />
-            <CreateQuiz />
-        
+            {/* <CreateQuiz /> */}
         </div>
     )
 }
