@@ -5,8 +5,8 @@ export default function Browse() {
 
   return (
     <>
-      <div className="flex flex-col h-[60%] w-[70%] gap-4">
-        <div className="text-[50px] text-special-black text-center">Browse</div>
+      <div className="flex flex-col h-[81%] w-[70%] gap-4">
+        <div className="text-[50px] mb-[10%] text-special-black text-center">Browse</div>
         
         <div className="bg-special-black flex flex-col basis-[80%] rounded-2xl items-center gap-36">
             <input

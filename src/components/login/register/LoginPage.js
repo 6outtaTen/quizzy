@@ -4,6 +4,8 @@ import { useAuth } from "../../../contexts/AuthContext";
 
 export default function LoginPage() {
 
+    const {user} = useAuth()
+
     const [formData, setFormData] = useState(
         {
             email: "",
@@ -16,7 +18,10 @@ export default function LoginPage() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
-
+    // if (user !== null) {
+    //     navigate("/")
+    // }
+        
     function handleChange(event) {
         const {name, value} = event.target
         setFormData(prevFormData => {
@@ -43,7 +48,7 @@ export default function LoginPage() {
         setLoading(false)
     }
 
-  return (
+    return (
         <>
             <div name="container" className="flex h-full">
                 <div className="flex w-[50%] h-full bg-special-pink items-center justify-center">

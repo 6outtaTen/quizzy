@@ -21,11 +21,13 @@ export default function Dashboard(props) {
           <Browse />
         </div>
         <div className="w-[50%] justify-between flex flex-col">
-          <div className="h-[50%] border-b-[6px] border-b-special-black flex justify-center items-center">
-            <span>QUIZZESSS</span>
+          <div className="h-[50%] border-b-[6px] border-b-special-black flex flex-col justify-center items-center">
+            <div className="text-[50px] mb-[20px] text-center">My Quizzes</div>
+            <MyQuizzes />
           </div>
 
           <div className="h-[50%] flex flex-col items-center justify-center">
+            <div className="text-[50px] mb-[100px]">Create a quiz</div>
             <button onClick={() => {setOpenModal(true)}} className="flex text-white text-center min-w-[50px] min-h-[50px] justify-center text-[50px] rounded-2xl bg-special-black w-[18%] h-[18%]">+</button>
           </div>          
         </div>

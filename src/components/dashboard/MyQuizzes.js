@@ -16,12 +16,10 @@ export default function MyQuizzes() {
 
 
     return (
-        <div className="my-quizzes">
-            <div className="my-quizzes-title">My quizzes</div>
-
-            <section className="cards-list">
+        <>
+            <section className="flex flex-col overflow-x-hidden overflow-y-visible gap-2 flex-nowrap h-[300px]">
                 {cards}
             </section> 
-        </div>
+        </>
     )
 }

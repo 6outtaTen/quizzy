@@ -1,17 +1,15 @@
 import React from 'react'
-import picture from '../../images/profile-picture.png'
 
 export default function QuizView(props) {
 
-    const sampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut "
-
     return (
-        <div className="card">
-            <div className="card-rect">
-                <div className="card-title">{props.title}</div>
-                <img className="card-image" src={props.img}/>
-                <div className="card-description">{props.description}</div>
-            </div>              
+        <div className="bg-special-black rounded-2xl w-[500px] cursor-pointer">
+            <div className="flex items-center justify-between">
+                <div className="text-white ml-[15px]">{props.title}</div>
+                <img className="w-[30px] mr-[10px] mt-[5px]" src={props.img}/>
+            </div>
+            
+            <div className="text-special-gray ml-[15px]">{props.description}</div>
         </div>
     )
 }
