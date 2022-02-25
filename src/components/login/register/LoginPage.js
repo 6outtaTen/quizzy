@@ -44,14 +44,17 @@ export default function LoginPage() {
     }
 
   return (
-        <div>
-            <div className="login-app-title">Quizzy</div>
-            <div className="login-rect">
-                <div className="login-title">Login</div>
+        <>
+            <div name="container" className="flex h-full">
+                <div className="flex w-[50%] h-full bg-special-pink items-center justify-center">
+                    <div className="flex text-[150px]">Quizzy</div>
+                </div>
 
-                <form onSubmit={handleSubmit}>
+                <div className="flex flex-col w-[50%] h-full items-center bg-special-black">
+                    <div className="text-[50px] text-center text-white mt-[40%] mb-[50px]">Login</div>
+                    
                     <input 
-                        className="username-field"
+                        className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink w-[50%]"
                         type="email"
                         name="email"
                         value={formData.email}
@@ -60,8 +63,8 @@ export default function LoginPage() {
                         required
                     />
 
-                    <input
-                        className="password-field"
+                    <input 
+                        className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink w-[50%] mt-[30px]"
                         type="password"
                         name="password"
                         value={formData.password}
@@ -70,12 +73,13 @@ export default function LoginPage() {
                         required
                     />
 
-                    <div className="login-button" disabled={loading} type="submit" onClick={handleSubmit}>Login</div>
-                </form>            
-                
-                <Link to="/register" className="create-account-button">Create an account</Link>
+                    <div className="flex items-center">
+                        <button className="text-white bg-special-pink rounded-2xl w-[200px] h-[50px] mt-[40px]" onClick={handleSubmit}>Login</button>
+                        <Link to="/register" className="text-[#66707d] border-b-2 border-b-special-pink mt-[55px] ml-[150px]">Create an account</Link>
+                    </div>
+                    
+                </div>
             </div>
-        </div>
-        
+        </>  
   )
 }

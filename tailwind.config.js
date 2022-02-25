@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         'special-pink' : "#6b5b95",
         'special-black': "#12130f",
+        'special-gray': "#616e7f",
+        'special-hover' : '#21221c',
       },
       boxShadow: {
         'header-white': '0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1)',

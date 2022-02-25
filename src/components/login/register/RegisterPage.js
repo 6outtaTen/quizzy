@@ -46,41 +46,53 @@ export default function RegisterPage() {
     
 
     return (
-        <div className="register-rect">
-            <div className="register-title">Register</div>
-            <form>
-                <input className="usernameReg-field"
-                    type="email"
-                    name="email" 
-                    value={formData.email}
-                    placeholder="Email"
-                    onChange={handleChange} 
-                    required
-                    />
-                <input
-                    className="passwordReg-field"
-                    type="password"
-                    name="password"
-                    value={formData.password}
-                    placeholder="Password"
-                    onChange={handleChange}
-                    required
+        <>
+
+            <div name="container" className="flex h-full">
+                <div className="flex w-[50%] h-full bg-special-pink items-center justify-center">
+                    <div className="flex text-[150px]">Quizzy</div>
+                </div>
+
+                <div className="flex flex-col w-[50%] h-full items-center bg-special-black">
+                    <div className="text-[50px] text-center text-white mt-[35%] mb-[50px]">Register</div>
+                    
+                    <input 
+                        className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink w-[50%]"
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        placeholder="Email"
+                        onChange={handleChange}
+                        required
                     />
 
-                <input 
-                    className="password-confirm"
-                    type="password" 
-                    name="confirmPassword"
-                    value={formData.confirmPassword} 
-                    placeholder="Confirm Password" 
-                    onChange={handleChange}
-                    required
+                    <input 
+                        className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink w-[50%] mt-[30px]"
+                        type="password"
+                        name="password"
+                        value={formData.password}
+                        placeholder="Password"
+                        onChange={handleChange}
+                        required
                     />
 
-                <div className="register-button" disabled={loading} onClick={handleSubmit}>Register</div>
-            </form>
-            
-            <Link to="/login" className="go-to-login">I already have an account</Link>
-        </div>
+                    <input 
+                        className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink w-[50%] mt-[30px]"
+                        type="confirmPassword"
+                        name="confirmPassword"
+                        value={formData.confirmPassword}
+                        placeholder="Confirm Password"
+                        onChange={handleChange}
+                        required
+                    />
+
+                    <div className="flex items-center">
+                        <button className="text-white bg-special-pink rounded-2xl w-[200px] h-[50px] mt-[40px]" onClick={handleSubmit}>Register</button>
+                        <Link to="/login" className="text-[#66707d] border-b-2 border-b-special-pink mt-[55px] ml-[110px]">I already have an account</Link>
+                    </div>
+                    
+                </div>
+            </div>
+        </>
     )  
 }
