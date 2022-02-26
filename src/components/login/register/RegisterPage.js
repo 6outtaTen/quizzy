@@ -87,7 +87,7 @@ export default function RegisterPage() {
                     />
 
                     <div className="flex items-center">
-                        <button className="text-white bg-special-pink rounded-2xl w-[200px] h-[50px] mt-[40px]" onClick={handleSubmit}>Register</button>
+                        <button className="text-white bg-special-pink hover:bg-special-pink-hover rounded-2xl w-[200px] h-[50px] mt-[40px]" onClick={handleSubmit}>Register</button>
                         <Link to="/login" className="text-[#66707d] border-b-2 border-b-special-pink mt-[55px] ml-[110px]">I already have an account</Link>
                     </div>
                     
