@@ -37,7 +37,6 @@ export default function CreateNewQuizAddQuestions() {
     
     function goBackToBasicInfo(e) {
         e.preventDefault()
-        navigate("/create-new-quiz/basic-info")
     }
 
     function handleQuizDataChange(questionData) {

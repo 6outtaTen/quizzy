@@ -3,23 +3,9 @@
   margin: 0;
 }
 
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+#trash {
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 /* ====================================== Srollbar Styling ====================================== */
