@@ -47,6 +47,8 @@ export default function CreateNewQuizAddQuestions() {
             }
         })
     }
+
+    
     
     function handleChange(event) {
         const {name, value} = event.target

@@ -121,7 +121,6 @@ export default function Dashboard() {
 const Modal = forwardRef((props, ref) => {
   const [open, setOpen] = useState(false);
 
-
   useImperativeHandle(ref, () => {
     return {
       open: () => setOpen(true),
