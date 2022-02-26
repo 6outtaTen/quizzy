@@ -10,10 +10,11 @@ export default function Dashboard(props) {
   const { currentUser } = useAuth();
 
   const [openModal, setOpenModal] = useState(false)
+  const [effect, setEffect] = useState(false)
   
   return (
     <> 
-      { openModal && <Modal closeModal={setOpenModal} />}
+      { openModal && <Modal closeModal={setOpenModal} effect={effect} />}
       <Navbar />
       <div name="container" className="h-[calc(100%-80px)] flex">
 
@@ -28,7 +29,7 @@ export default function Dashboard(props) {
 
           <div className="h-[50%] flex flex-col items-center justify-center">
             <div className="text-[50px] mb-[100px]">Create a quiz</div>
-            <button onClick={() => {setOpenModal(true)}} className="flex text-white text-center min-w-[50px] min-h-[50px] justify-center text-[50px] rounded-2xl bg-special-black w-[18%] h-[18%]">+</button>
+            <button onClick={() => setOpenModal(true)} className="flex text-white text-center min-w-[50px] min-h-[50px] justify-center text-[50px] rounded-2xl bg-special-black hover:bg-special-hover w-[18%] h-[18%]">+</button>
           </div>          
         </div>
       </div>

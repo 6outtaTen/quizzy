@@ -20,7 +20,7 @@ export default function Modal({closeModal}) {
                 <div className="w-[500px] h-[500px] bg-[#0e0f0c] flex flex-col rounded-xl" name="modal-container">
                     
                     <div className="flex justify-end text-white mr-[20px]">
-                        <button className="text-[25px]" onClick={() => closeModal(false), () => setInProp(false)}> X </button>
+                        <button className="text-[25px]" onClick={() => closeModal(false)}> X </button>
                     </div>
 
                     <div className="text-white text-center text-4xl inline-block" name="title">
