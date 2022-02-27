@@ -57,7 +57,7 @@ export default function QuestionView() {
     return (
         <>
             <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'></link>  
-            <div className="bg-special-black w-[80%] h-[200px] rounded-2xl">
+            <div className="bg-special-black lg:w-[80%] w-[445px] h-[200px] rounded-2xl">
 
                 <div name="header" className="flex text-white items-center justify-between border-b-2 border-special-gray h-[50px]">
                     <span name="question-count" className="font-bold ml-[15px] mt-[5px]">1</span>
@@ -81,7 +81,7 @@ export default function QuestionView() {
 
 
                         <select
-                            className="ml-[5%] p-0 h-[22.5px] w-[60%] text-center outline-none"
+                            className="ml-[5%] p-0 h-[30px] bg-special-black text-white w-[60%] text-center border-2 border-special-gray outline-none"
                             onChange={handleChange} 
                             name="answerType"
                         >

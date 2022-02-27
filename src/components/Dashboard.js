@@ -104,12 +104,12 @@ export default function Dashboard() {
       </div>
       <div className="w-[50%] justify-between flex flex-col">
         <div className="h-[50%] border-b-[6px] border-b-special-black flex flex-col justify-center items-center">
-          <div className="text-[50px] mb-[20px] text-center">My Quizzes</div>
+          <div className="lg:text-[50px] text-[36px] mb-[20px] text-center">My Quizzes</div>
           <MyQuizzes />
         </div>
 
         <div className="h-[50%] flex flex-col items-center justify-center">
-          <div className="text-[50px] mb-[100px]">Create a quiz</div>
+          <div className="lg:text-[50px] text-[36px] mb-[100px]">Create a quiz</div>
           <button onClick={() => modalRef.current.open()} className="flex text-white text-center min-w-[50px] min-h-[50px] justify-center text-[50px] rounded-2xl bg-special-black hover:bg-special-hover w-[18%] h-[18%]">+</button>
         </div>          
       </div>

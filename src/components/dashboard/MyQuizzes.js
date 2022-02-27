@@ -17,7 +17,7 @@ export default function MyQuizzes() {
 
     return (
         <>
-            <section className="flex flex-col overflow-x-hidden overflow-y-visible gap-2 flex-nowrap h-[300px]">
+            <section className="flex flex-col overflow-x-hidden overflow-y-visible gap-2 flex-nowrap items-center h-[300px]">
                 {cards}
             </section> 
         </>

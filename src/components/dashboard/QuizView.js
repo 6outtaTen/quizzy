@@ -3,7 +3,7 @@ import React from 'react'
 export default function QuizView(props) {
 
     return (
-        <div className="bg-special-black rounded-2xl w-[500px] cursor-pointer">
+        <div className="bg-special-black rounded-2xl lg:w-[90%] w-[80%] cursor-pointer">
             <div className="flex items-center justify-between">
                 <div className="text-white ml-[15px]">{props.title}</div>
                 <img className="w-[30px] mr-[10px] mt-[5px]" src={props.img}/>

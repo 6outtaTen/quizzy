@@ -52,35 +52,38 @@ export default function LoginPage() {
         <>
             <div name="container" className="flex h-full">
                 <div className="flex w-[50%] h-full bg-special-pink items-center justify-center">
-                    <div className="flex text-[150px]">Quizzy</div>
+                    <div className="flex lg:text-[150px] text-[70px]">Quizzy</div>
                 </div>
 
-                <div className="flex flex-col w-[50%] h-full items-center bg-special-black">
-                    <div className="text-[50px] text-center text-white mt-[40%] mb-[50px]">Login</div>
+                <div className="flex flex-col w-[50%] h-full items-center justify-center bg-special-black">
+                    <div className="flex flex-col w-full items-center">
+                        <div className="lg:text-[50px] text-[36px] text-center text-white mb-[50px]">Login</div>
+                        
+                        <input 
+                            className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink lg:w-[50%] w-[80%]"
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            placeholder="Enter your email"
+                            onChange={handleChange}
+                            required
+                        />
+
+                        <input 
+                            className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink lg:w-[50%] w-[80%] mt-[30px]"
+                            type="password"
+                            name="password"
+                            value={formData.password}
+                            placeholder="Enter your password"
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
                     
-                    <input 
-                        className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink w-[50%]"
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        placeholder="Enter your email"
-                        onChange={handleChange}
-                        required
-                    />
 
-                    <input 
-                        className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink w-[50%] mt-[30px]"
-                        type="password"
-                        name="password"
-                        value={formData.password}
-                        placeholder="Enter your password"
-                        onChange={handleChange}
-                        required
-                    />
-
-                    <div className="flex items-center">
-                        <button className="text-white bg-special-pink hover:bg-special-pink-hover rounded-2xl w-[200px] h-[50px] mt-[40px]" onClick={handleSubmit}>Login</button>
-                        <Link to="/register" className="text-[#66707d] border-b-2 border-b-special-pink mt-[55px] ml-[150px]">Create an account</Link>
+                    <div className="flex w-full items-center justify-center gap-[10%]">
+                        <button className="text-white bg-special-pink hover:bg-special-pink-hover rounded-2xl lg:w-[20%] w-[35%] h-[50px] mt-[40px]" onClick={handleSubmit}>Login</button>
+                        <Link to="/register" className="text-[#66707d] lg:text-[18px] text-[10.5px] text-center border-b-2 border-b-special-pink mt-[55px] lg:w-[20%] w-[35%]">Create an account</Link>
                     </div>
                     
                 </div>
