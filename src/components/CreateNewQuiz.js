@@ -13,7 +13,7 @@ export default function CreateNewQuiz() {
             <Navbar />
 
             <div name="container" className="h-[calc(100%-80px)] pl-[180px] pr-[180px] flex flex-col overflow-y-auto items-center">
-                <div className="text-[60px] mb-[80px]">Create a new quiz</div>
+                <div className="lg:text-[60px] w-[500px] text-center text-[36px] mb-[80px]">Create a new quiz</div>
                 <QuestionView />
 
                 <div className="bg-special-black rounded-2xl flex lg:w-[80%] h-[150px] mt-[20px] items-center w-[215px] justify-center">

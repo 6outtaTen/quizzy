@@ -81,7 +81,7 @@ export default function Dashboard() {
           <div className="flex">
             <p className="ml-[50px] mt-[50px]">Quiz description</p>
             <textarea
-              className="resize-none ml-[73.5px] mt-[30px] bg-transparent border-2 border-special-pink outline-none w-[40%]"
+              className="resize-none lg:ml-[73.5px] ml-[20px] mt-[30px] bg-transparent border-2 border-special-pink outline-none w-[40%]"
               placeholder="Enter the quiz description"
               name="description"
               value={formData.description}
@@ -91,7 +91,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="text-white flex justify-center items-center" name="footer">
-          <button onClick={handleSubmit} className="w-[150px] h-[45px] mt-[10%] b-none bg-special-pink rounded-xl hover:bg-special-pink-hover">Continue</button>
+          <button onClick={handleSubmit} className="w-[150px] lg:h-[45px] h-[40px] lg:mt-[10%] mt-[5%] b-none bg-special-pink rounded-xl hover:bg-special-pink-hover">Continue</button>
         </div>
 
     </Modal>
@@ -149,7 +149,7 @@ const Modal = forwardRef((props, ref) => {
               }
             }}
             onClick={() => setOpen(false)}
-            className="w-[100vw] h-[100vh] top-0 left-0 fixed justify-center items-center" name="modal-bg"
+            className="w-full h-full fixed justify-center items-center" name="modal-bg"
           />
           <motion.div
             initial={{
@@ -167,10 +167,10 @@ const Modal = forwardRef((props, ref) => {
                 delay: 0.3
               }
             }}
-            className="w-[500px] h-[350px] bg-[#0e0f0c] fixed top-[25%] left-[38%] flex flex-col rounded-xl"
+            className="lg:w-[500px] lg:h-[350px] bg-[#0e0f0c] fixed top-[25%] w-[400px] lg:left-[38%] left-[10%] flex flex-col rounded-xl"
           >
             <motion.div
-              className="modal-content"
+              className=""
               initial={{
                 x: 100,
                 opacity: 0
