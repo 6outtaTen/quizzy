@@ -17,7 +17,7 @@ export default function CreateNewQuiz() {
                 <QuestionView />
 
                 <div className="bg-special-black rounded-2xl flex lg:w-[80%] h-[150px] mt-[20px] items-center w-[215px] justify-center">
-                    <div className="font-bold text-white hover:text-[#ffffffa6] hover:border-special-pink-hover text-[20px] border-b-2 border-special-pink cursor-pointer">+ ADD QUESTION</div>
+                    <div className="font-bold text-white hover:text-special-white-hover hover:border-special-pink-hover text-[20px] border-b-2 border-special-pink cursor-pointer">+ ADD QUESTION</div>
                 </div>
                 
             </div>

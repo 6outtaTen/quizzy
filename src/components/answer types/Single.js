@@ -1,9 +1,19 @@
 import React, {useState} from 'react'
+import SingleAnswers from './SingleAnswers'
 import SingleAnswerView from './SingleAnswerView'
 
 export default function Single(props) {
 
     const [ansCount, setAnsCount] = useState(1)
+    const [ansArr, setAnsArr] = useState(["", "", "", ""])
+
+    const elements = ansArr.map(item => {
+        return (
+            <SingleAnswerView />
+        )
+    })
+
+    console.log(elements)
 
     return (
         <div className="flex flex-col w-full h-full">
@@ -22,11 +32,8 @@ export default function Single(props) {
                 </select>
             </div>
 
-            <div className="flex w-full h-[50%] justify-center items-center">
-                <section className="flex w-[80%] h-[50%] justify-center flex-col flex-nowrap items-center overflow-y-visible gap-6">
-                    <SingleAnswerView />
-                    <SingleAnswerView />
-                </section>
+            <div className="flex flex-col w-full h-[50%] justify-center items-center">
+                <SingleAnswers />
                 <button className="text-white h-[10px] text-[20px] justify-start">+</button>
 
                 
