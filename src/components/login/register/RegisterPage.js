@@ -53,9 +53,9 @@ export default function RegisterPage() {
                     <div className="flex lg:text-[150px] text-[70px]">Quizzy</div>
                 </div>
 
-                <div className="flex flex-col w-[50%] h-full items-center bg-special-black">
+                <div className="flex flex-col w-[50%] h-full items-center justify-center bg-special-black">
                     <div className="flex flex-col w-full items-center">
-                        <div className="lg:text-[50px] text-[36px] text-center text-white mt-[35%] mb-[50px]">Register</div>
+                        <div className="lg:text-[50px] text-[36px] text-center text-white mb-[50px]">Register</div>
                         
                         <input 
                             className="flex h-[20px] bg-transparent border-b-2 outline-none text-white border-b-special-pink w-[50%]"

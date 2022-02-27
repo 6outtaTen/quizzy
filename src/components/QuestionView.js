@@ -67,7 +67,7 @@ export default function QuestionView() {
                 <div name="body" className="flex h-[calc(100%-50px)] w-full">
                     <div name="left-col" className="flex w-[30%] items-center">
                         <textarea
-                            className="w-[90%] ml-[30px] h-[60px] text-white bg-transparent border-2 outline-none resize-none border-special-pink"
+                            className="w-[90%] ml-[30px] h-[60px] text-center text-white bg-transparent border-2 outline-none resize-none border-special-pink"
                             placeholder="Enter question title"
                             name="question"
                             onChange={handleChange}
