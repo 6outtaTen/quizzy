@@ -13,6 +13,7 @@ module.exports = {
         'special-gray': "#616e7f",
         'special-hover' : '#21221c',
         'special-pink-hover': '#6b6188',
+        'special-white-hover': '#ffffffa6',
       },
       boxShadow: {
         'header-white': '0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1)',

@@ -83,7 +83,7 @@ export default function LoginPage() {
 
                     <div className="flex w-full items-center justify-center gap-[10%]">
                         <button className="text-white bg-special-pink hover:bg-special-pink-hover rounded-2xl lg:w-[20%] w-[35%] h-[50px] mt-[40px]" onClick={handleSubmit}>Login</button>
-                        <Link to="/register" className="text-[#66707d] lg:text-[18px] text-[10.5px] text-center border-b-2 border-b-special-pink mt-[55px] lg:w-[20%] w-[35%]">Create an account</Link>
+                        <Link to="/register" className="text-[#66707d] lg:text-[18px] text-[10.5px] text-center border-b-2 border-b-special-pink mt-[55px] lg:w-[20%] w-[35%] hover:border-b-special-pink-hover hover:text-special-white-hover">Create an account</Link>
                     </div>
                     
                 </div>

@@ -91,7 +91,7 @@ export default function RegisterPage() {
 
                     <div className="flex w-full items-center justify-center gap-[10%]">
                         <button className="text-white lg:text-[18px] text-[12px] bg-special-pink hover:bg-special-pink-hover rounded-2xl lg:w-[20%] w-[22%] h-[50px] mt-[40px]" onClick={handleSubmit}>Register</button>
-                        <Link to="/login" className="text-[#66707d] lg:text-[17px] text-[10.5px] text-center border-b-2 border-b-special-pink mt-[55px] lg:w-[20%] w-[20%]">I already have an account</Link>
+                        <Link to="/login" className="text-[#66707d] lg:text-[17px] text-[10.5px] text-center border-b-2 border-b-special-pink mt-[55px] lg:w-[20%] w-[20%] hover:border-b-special-pink-hover hover:text-special-white-hover">I already have an account</Link>
                     </div>
                     
                 </div>
