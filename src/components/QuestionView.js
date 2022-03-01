@@ -45,6 +45,8 @@ export default function QuestionView() {
     function handleChange(event) {
         const {name, value} = event.target
         
+        console.log("Something changed")
+
         setQuestionData(prevQuestionData => {
             return {
                 [name]: value
@@ -93,9 +95,24 @@ export default function QuestionView() {
                     </div>
 
                     <div name="right col" className="flex w-[40%]">
-                        {questionData.answerType === "single" && <Single />}
-                        {questionData.answerType === "multiple" && <Multiple />}
-                        {questionData.answerType === "text" && <Text />}
+                        {questionData.answerType === "single" && <Single
+                        questionData={questionData}
+                        setQuestionData={setQuestionData}
+
+                        quizData={quizData}
+                        setQuizData={quizData}
+                        handleQuizDataChange={handleQuizDataChange}
+
+                        update={handleChange}
+                        a1Val={questionData.answer1}
+                        a2Val={questionData.answer2}
+                        a3Val={questionData.answer3}
+                        a4Val={questionData.answer4}
+                        a5Val={questionData.answer5}
+                        a6Val={questionData.answer6}
+                        />}
+                        {questionData.answerType === "multiple" && <Multiple update={handleChange}/>}
+                        {questionData.answerType === "text" && <Text update={handleChange}/>}
                     </div>
                     
                 </div>
