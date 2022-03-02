@@ -69,6 +69,9 @@ export default function QuestionView() {
 
                 <div name="header" className="flex text-white items-center justify-between border-b-2 border-special-gray h-[50px]">
                     <span name="question-count" className="font-bold ml-[15px] mt-[5px]">1</span>
+
+                    <button className="bg-special-pink rounded-2xl w-[15%]">Save question</button>
+
                     <i id="trash" className="fa fa-trash white-color"></i>
                 </div>
 
