@@ -62,11 +62,12 @@ export function ContextProvider({ children }) {
 
         setQuestionData(prevQuestionData => {
             return {
+                ...prevQuestionData,
                 [name]: value
             }
         })
 
-        handleQuizDataChange(questionData)
+        // handleQuizDataChange(questionData)
     }
 
     return (

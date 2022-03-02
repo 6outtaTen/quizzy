@@ -3,58 +3,64 @@ import React, {useState} from 'react'
 import Single from './answer types/Single'
 import Multiple from './answer types/Multiple'
 import Text from './answer types/Text'
+import { useChange, useQuestions, useQuiz, useQuizChange } from '../contexts/ContextProvider'
 
 export default function QuestionView() {
     
     const quizTitle = JSON.parse(localStorage.getItem("title"))[0]
     const quizDescription = JSON.parse(localStorage.getItem("description"))[0]
 
-    const [quizData, setQuizData] = useState(
-        {
-            title: quizTitle,
-            description: quizDescription,
-            questions: []
-        }
-    )
+    // const [quizData, setQuizData] = useState(
+    //     {
+    //         title: quizTitle,
+    //         description: quizDescription,
+    //         questions: []
+    //     }
+    // )
+
+    const handleChange = useChange();
+    const quizData = useQuiz();
+    const handleQuizChange = useQuizChange();
+    const questionData = useQuestions();
     
-    const [questionData, setQuestionData] = useState(
-        {
-            question: "",
-            answerType: "",
-            correctAnswer: "",
-            answer1: "",
-            answer2: "",
-            answer3: "",
-            answer4: "",
-            answer5: "",
-            answer6: ""
-        }
-    )
+    // const [questionData, setQuestionData] = useState(
+    //     {
+    //         question: "",
+    //         answerType: "",
+    //         correctAnswer: "",
+    //         answer1: "",
+    //         answer2: "",
+    //         answer3: "",
+    //         answer4: "",
+    //         answer5: "",
+    //         answer6: ""
+    //     }
+    // )
 
     
-    function handleQuizDataChange(questionData) {
-        setQuizData(prevQuizData => {
-            return {
-                ...prevQuizData,
-                questions: [...prevQuizData.questions, questionData]
-            }
-        })
-    }
+    // function handleQuizDataChange(questionData) {
+    //     setQuizData(prevQuizData => {
+    //         return {
+    //             ...prevQuizData,
+    //             questions: [...prevQuizData.questions, questionData]
+    //         }
+    //     })
+    // }
 
 
-    function handleChange(event) {
-        const {name, value} = event.target
+    // function handleChange(event) {
+    //     const {name, value} = event.target
         
-        console.log("Something changed")
+    //     console.log("Something changed")
 
-        setQuestionData(prevQuestionData => {
-            return {
-                [name]: value
-            }
-        })
+    //     setQuestionData(prevQuestionData => {
+    //         return {
+    //             [name]: value
+    //         }
+    //     })
 
-        handleQuizDataChange(questionData)
-    }
+    //     handleQuizDataChange(questionData)
+    // }
 
     return (
         <>
@@ -79,8 +85,6 @@ export default function QuestionView() {
 
                     <div name="center-col" className="flex w-[30%] items-center justify-center flex-col">
 
-                        {/* <span className="text-white text-[23px] ml-[3%] mt-[4%] mb-[9%]">Answer type</span> */}
-
 
                         <select
                             className="ml-[5%] p-0 h-[30px] bg-special-black text-white w-[60%] text-center border-2 border-special-gray outline-none"
@@ -96,14 +100,14 @@ export default function QuestionView() {
 
                     <div name="right col" className="flex w-[40%]">
                         {questionData.answerType === "single" && <Single
-                        questionData={questionData}
-                        setQuestionData={setQuestionData}
+                        // questionData={questionData}
+                        // setQuestionData={setQuestionData}
 
-                        quizData={quizData}
-                        setQuizData={quizData}
-                        handleQuizDataChange={handleQuizDataChange}
+                        // quizData={quizData}
+                        // setQuizData={quizData}
+                        // handleQuizDataChange={handleQuizDataChange}
 
-                        update={handleChange}
+                        // update={handleChange}
                         a1Val={questionData.answer1}
                         a2Val={questionData.answer2}
                         a3Val={questionData.answer3}
