@@ -9,77 +9,26 @@ export default function SingleAnswers(props) {
                 <SingleAnswerView 
                     placeholder="Answer 1" 
                     name="answer1" 
-                    update={props.update} 
-                    value={props.a1Val} 
-
-                    questionData={props.questionData}
-                    setQuestionData={props.setQuestionData}
-
-                    quizData={props.quizData}
-                    setQuizData={props.quizData}
-                    handleQuizDataChange={props.handleQuizDataChange}
                 />
-                <SingleAnswerView placeholder="Answer 2" 
+                <SingleAnswerView 
+                    placeholder="Answer 2" 
                     name="answer2" 
-                    value={props.a2Val}
-                    
-                    questionData={props.questionData}
-                    setQuestionData={props.setQuestionData}
-
-                    quizData={props.quizData}
-                    setQuizData={props.quizData}
-                    handleQuizDataChange={props.handleQuizDataChange}
                 />
                 <SingleAnswerView 
                     placeholder="Answer 3 (optional)"
-                    name="answer3" update={props.update}
-                    value={props.a3Val}
-                    
-                    questionData={props.questionData}
-                    setQuestionData={props.setQuestionData}
-
-                    quizData={props.quizData}
-                    setQuizData={props.quizData}
-                    handleQuizDataChange={props.handleQuizDataChange}
-                    />
+                    name="answer3"
+                />
                 <SingleAnswerView 
                     placeholder="Answer 4 (optional)"
-                    name="answer4"
-                    update={props.update}
-                    value={props.a4Val}
-                    
-                    questionData={props.questionData}
-                    setQuestionData={props.setQuestionData}
-
-                    quizData={props.quizData}
-                    setQuizData={props.quizData}
-                    handleQuizDataChange={props.handleQuizDataChange}
-                    />
+                    name="answer4"   
+                />
                 <SingleAnswerView
                     placeholder="Answer 5 (optional)"
-                    name="answer5" update={props.update}
-                    value={props.a5Val}
-                    
-                    questionData={props.questionData}
-                    setQuestionData={props.setQuestionData}
-
-                    quizData={props.quizData}
-                    setQuizData={props.quizData}
-                    handleQuizDataChange={props.handleQuizDataChange}
-   
+                    name="answer5" 
                 />
                 <SingleAnswerView 
                     placeholder="Answer 6 (optional)"
                     name="answer6"
-                    update={props.update}
-                    value={props.a6Val}
-
-                    questionData={props.questionData}
-                    setQuestionData={props.setQuestionData}
-
-                    quizData={props.quizData}
-                    setQuizData={props.quizData}
-                    handleQuizDataChange={props.handleQuizDataChange}
                     />
             </section> 
         </>

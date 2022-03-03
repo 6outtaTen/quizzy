@@ -1,4 +1,3 @@
-import { filterProps } from 'framer-motion'
 import React, {useState} from 'react'
 import Single from './answer types/Single'
 import Multiple from './answer types/Multiple'
@@ -7,61 +6,23 @@ import { useChange, useQuestions, useQuiz, useQuizChange } from '../contexts/Con
 
 export default function QuestionView() {
     
-    const quizTitle = JSON.parse(localStorage.getItem("title"))[0]
-    const quizDescription = JSON.parse(localStorage.getItem("description"))[0]
+    // const quizTitle = JSON.parse(localStorage.getItem("title"))[0]
+    // const quizDescription = JSON.parse(localStorage.getItem("description"))[0]
 
-    // const [quizData, setQuizData] = useState(
-    //     {
-    //         title: quizTitle,
-    //         description: quizDescription,
-    //         questions: []
-    //     }
-    // )
+    const [saveClicked, setSaveClicked] = useState(false);
 
     const handleChange = useChange();
     const quizData = useQuiz();
     const handleQuizChange = useQuizChange();
     const questionData = useQuestions();
+
+    function saveQuestion() {
+        setSaveClicked(true);
+        handleQuizChange(questionData);
+    }
+
+    console.log(quizData);
     
-    // const [questionData, setQuestionData] = useState(
-    //     {
-    //         question: "",
-    //         answerType: "",
-    //         correctAnswer: "",
-    //         answer1: "",
-    //         answer2: "",
-    //         answer3: "",
-    //         answer4: "",
-    //         answer5: "",
-    //         answer6: ""
-    //     }
-    // )
-
-    
-    // function handleQuizDataChange(questionData) {
-    //     setQuizData(prevQuizData => {
-    //         return {
-    //             ...prevQuizData,
-    //             questions: [...prevQuizData.questions, questionData]
-    //         }
-    //     })
-    // }
-
-
-    // function handleChange(event) {
-    //     const {name, value} = event.target
-        
-    //     console.log("Something changed")
-
-    //     setQuestionData(prevQuestionData => {
-    //         return {
-    //             [name]: value
-    //         }
-    //     })
-
-    //     handleQuizDataChange(questionData)
-    // }
-
     return (
         <>
             <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'></link>  
@@ -70,7 +31,7 @@ export default function QuestionView() {
                 <div name="header" className="flex text-white items-center justify-between border-b-2 border-special-gray h-[50px]">
                     <span name="question-count" className="font-bold ml-[15px] mt-[5px]">1</span>
 
-                    <button className="bg-special-pink rounded-2xl w-[15%]">Save question</button>
+                    <button className="bg-special-pink rounded-2xl w-[11%] text-[9px] lg:text-[12px]" onClick={saveQuestion}>{saveClicked ? "Question saved" : "Save question"}</button>
 
                     <i id="trash" className="fa fa-trash white-color"></i>
                 </div>
@@ -102,24 +63,9 @@ export default function QuestionView() {
                     </div>
 
                     <div name="right col" className="flex w-[40%]">
-                        {questionData.answerType === "single" && <Single
-                        // questionData={questionData}
-                        // setQuestionData={setQuestionData}
-
-                        // quizData={quizData}
-                        // setQuizData={quizData}
-                        // handleQuizDataChange={handleQuizDataChange}
-
-                        // update={handleChange}
-                        a1Val={questionData.answer1}
-                        a2Val={questionData.answer2}
-                        a3Val={questionData.answer3}
-                        a4Val={questionData.answer4}
-                        a5Val={questionData.answer5}
-                        a6Val={questionData.answer6}
-                        />}
+                        {questionData.answerType === "single"  && <Single/>}
+                        {questionData.answerType === "text"  && <Single/>}
                         {questionData.answerType === "multiple" && <Multiple update={handleChange}/>}
-                        {questionData.answerType === "text" && <Text update={handleChange}/>}
                     </div>
                     
                 </div>

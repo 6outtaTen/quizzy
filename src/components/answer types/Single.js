@@ -1,8 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import SingleAnswers from './SingleAnswers'
 import SingleAnswerView from './SingleAnswerView'
 import { useQuiz } from '../../contexts/ContextProvider'
-import { useQuestions } from '../../contexts/ContextProvider'
 import { useQuizChange } from '../../contexts/ContextProvider'
 import { useChange } from '../../contexts/ContextProvider'
 
@@ -10,7 +9,6 @@ export default function Single(props) {
 
     const handleChange = useChange();
     const quizData = useQuiz();
-    // const questionData = useQuestions();
     const handleQuizChange = useQuizChange();
 
 
@@ -34,22 +32,7 @@ export default function Single(props) {
             </div>
 
             <div className="flex flex-col w-full h-[50%] justify-center items-center">
-                <SingleAnswers
-                    update={props.update}
-                    questionData={props.questionData}
-                    setQuestionData={props.setQuestionData}
-
-                    quizData={props.quizData}
-                    setQuizData={props.quizData}
-                    handleQuizDataChange={props.handleQuizDataChange}
-
-                    a1Val={props.a1Val}
-                    a2Val={props.a2Val}
-                    a3Val={props.a3Val}
-                    a4Val={props.a4Val}
-                    a5Val={props.a5Val}
-                    a6Val={props.a6Val}
-                />  
+                <SingleAnswers/>  
             </div>
 
         </div>

@@ -5,18 +5,16 @@ import Navbar from "./Navbar";
 import Browse from "./dashboard/Browse";
 import MyQuizzes from "./dashboard/MyQuizzes";
 import { motion, AnimatePresence } from "framer-motion"
+import { useBasicInfo, useQuiz } from "../contexts/ContextProvider";
 
 export default function Dashboard() {
 
   const navigate = useNavigate()
   const { currentUser } = useAuth();
   const modalRef = useRef()
-  const [openModal, setOpenModal] = useState(false)
-  const [effect, setEffect] = useState(false)
 
-
-  
-  //() => setOpenModal(true)
+  const quizData = useQuiz();
+  const setQuizData = useBasicInfo();
 
   const [formData, setFormData] = useState(
     {
@@ -47,6 +45,8 @@ export default function Dashboard() {
 
       localStorage.setItem("title", JSON.stringify(quizTitle))
       localStorage.setItem("description", JSON.stringify(quizDescription)) 
+
+      setQuizData(formData.title, formData.description);
       
       navigate("/create-new-quiz")
 
@@ -59,9 +59,6 @@ export default function Dashboard() {
   return (
     <> 
       <Modal ref={modalRef}>
-      {/* <div className="flex justify-end text-white mr-[20px]">
-          <button className="text-[25px]" onclick={() => setOpen(false)}> X </button>
-      </div> */}
 
       <div className="text-white text-4xl flex justify-center" name="title">
         <h1>Create a quiz</h1>

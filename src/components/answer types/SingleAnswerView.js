@@ -3,8 +3,6 @@ import { useQuiz } from '../../contexts/ContextProvider';
 import { useQuestions } from '../../contexts/ContextProvider';
 import { useQuizChange } from '../../contexts/ContextProvider';
 import { useChange } from '../../contexts/ContextProvider';
-import { useState } from 'react';
-
 
 export default function SingleAnswerView(props) {
 
@@ -14,51 +12,6 @@ export default function SingleAnswerView(props) {
     const handleQuizChange = useQuizChange();
     const questionData = useQuestions();
     let val = "";
-
-    // const [questionData, setQuestionData] = useState(
-    //     {
-    //         question: "",
-    //         answerType: "",
-    //         correctAnswer: "",
-    //         answer1: "",
-    //         answer2: "",
-    //         answer3: "",
-    //         answer4: "",
-    //         answer5: "",
-    //         answer6: ""
-    //     }
-    // )
-    
-
-    // function handleQuizDataChange(questionData) {
-    //     setQuizData(prevQuizData => {
-    //         return {
-    //             ...prevQuizData,
-    //             questions: [...prevQuizData.questions, questionData]
-    //         }
-    //     })
-    // }
-
-
-    // function handleChange(event) {
-    //     const {name, value} = event.target
-        
-    //     console.log("Something changed")
-
-    //     setQuestionData(prevQuestionData => {
-    //         return {
-    //             ...prevQuestionData,
-    //             [name]: value
-    //         }
-    //     })
-
-    //     handleQuizDataChange(questionData)
-    // }
-
-
-
-
-    console.log(quizData)
 
     switch (props.name) {
         case "answer1":
@@ -82,8 +35,6 @@ export default function SingleAnswerView(props) {
         default:
             break;
     }
-
-
 
     return (
         <div className="w-full">
