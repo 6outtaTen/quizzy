@@ -5,6 +5,11 @@ const QuestionContext = createContext();
 const QuizChangeContext = createContext();
 const ChangeContext = createContext();
 const SetBasicInfo = createContext();
+const UpdateQuestion = createContext();
+
+export function useUpdate() {
+    return useContext(UpdateQuestion)
+}
 
 export function useBasicInfo() {
     return useContext(SetBasicInfo);
@@ -49,13 +54,20 @@ export function ContextProvider({ children }) {
         }
     )
 
-    function handleQuizDataChange(questionData) {
+    function handleQuizDataChange(questionData, questionCount) {
         setQuizData(prevQuizData => {
             return {
                 ...prevQuizData,
                 questions: [...prevQuizData.questions, questionData]
             }
         })
+    }
+
+    function updateQuestion(index, newData) {
+        const arr = [...quizData.questions]
+        arr[index] = newData
+
+        setQuestionData(newData)
     }
 
     function setQuizBasicInfo(title, description) {
@@ -73,8 +85,6 @@ export function ContextProvider({ children }) {
     function handleChange(event) {
         const {name, value} = event.target
         
-        console.log("Something changed")
-
         setQuestionData(prevQuestionData => {
             return {
                 ...prevQuestionData,
@@ -91,7 +101,9 @@ export function ContextProvider({ children }) {
                 <QuizChangeContext.Provider value={handleQuizDataChange}>
                     <ChangeContext.Provider value={handleChange}>
                         <SetBasicInfo.Provider value={setQuizBasicInfo}>
-                            {children}
+                            <UpdateQuestion.Provider value={updateQuestion}>
+                                {children}
+                            </UpdateQuestion.Provider>
                         </SetBasicInfo.Provider>
                     </ChangeContext.Provider>
                 </QuizChangeContext.Provider>

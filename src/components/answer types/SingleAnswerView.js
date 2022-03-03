@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuiz } from '../../contexts/ContextProvider';
+import { useQuiz, useUpdate } from '../../contexts/ContextProvider';
 import { useQuestions } from '../../contexts/ContextProvider';
 import { useQuizChange } from '../../contexts/ContextProvider';
 import { useChange } from '../../contexts/ContextProvider';
@@ -11,6 +11,8 @@ export default function SingleAnswerView(props) {
     const quizData = useQuiz();
     const handleQuizChange = useQuizChange();
     const questionData = useQuestions();
+    const updateQuestion = useUpdate();
+
     let val = "";
 
     switch (props.name) {
@@ -36,13 +38,19 @@ export default function SingleAnswerView(props) {
             break;
     }
 
+    function handle(e) {
+        handleChange(e)
+
+        updateQuestion(0, questionData)
+    }
+
     return (
         <div className="w-full">
             <textarea
                 className="w-[80%] h-[30px] text-center text-white bg-transparent border-2 outline-none resize-none border-special-pink"
                 placeholder={props.placeholder}
                 name={props.name}
-                onChange={handleChange}
+                onChange={handle}
                 value={val}                    
             >  
             </textarea>
