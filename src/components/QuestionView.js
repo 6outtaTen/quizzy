@@ -16,11 +16,6 @@ export default function QuestionView() {
     const handleQuizChange = useQuizChange();
     const questionData = useQuestions();
 
-    function saveQuestion() {
-        setSaveClicked(true);
-        handleQuizChange(questionData);
-    }
-
     console.log(quizData);
     
     return (
@@ -30,9 +25,6 @@ export default function QuestionView() {
 
                 <div name="header" className="flex text-white items-center justify-between border-b-2 border-special-gray h-[50px]">
                     <span name="question-count" className="font-bold ml-[15px] mt-[5px]">1</span>
-
-                    <button className="bg-special-pink rounded-2xl w-[11%] text-[9px] lg:text-[12px]" onClick={saveQuestion}>{saveClicked ? "Question saved" : "Save question"}</button>
-
                     <i id="trash" className="fa fa-trash white-color"></i>
                 </div>
 
@@ -51,7 +43,7 @@ export default function QuestionView() {
 
 
                         <select
-                            className="ml-[5%] p-0 h-[30px] bg-special-black text-white w-[60%] text-center border-2 border-special-gray outline-none"
+                            className="ml-[5%] p-0 h-[30px] text-[9px] lg:text-[14px] bg-special-black text-white w-[60%] text-center border-2 border-special-gray outline-none"
                             onChange={handleChange} 
                             name="answerType"
                         >

@@ -1,7 +1,7 @@
 import React from 'react'
 import SingleAnswers from './SingleAnswers'
 import SingleAnswerView from './SingleAnswerView'
-import { useQuiz } from '../../contexts/ContextProvider'
+import { useQuestions, useQuiz, useUpdate } from '../../contexts/ContextProvider'
 import { useQuizChange } from '../../contexts/ContextProvider'
 import { useChange } from '../../contexts/ContextProvider'
 
@@ -10,7 +10,14 @@ export default function Single(props) {
     const handleChange = useChange();
     const quizData = useQuiz();
     const handleQuizChange = useQuizChange();
+    const updateQuestion = useUpdate();
+    const questionData = useQuestions();
 
+    function handle(e) {
+        handleChange(e)
+
+        updateQuestion(0, questionData)
+    }
 
     return (
         <div className="flex flex-col w-full h-full">
@@ -18,7 +25,7 @@ export default function Single(props) {
                 <select
                     className="w-[80%] bg-special-black text-white border-2 border-special-gray h-[40%] text-center"
                     name="correctAnswer"
-                    onChange={handleChange}
+                    onChange={handle}
                 >
                     <option value="">Choose the correct answer</option>
                     <option value="answer1">Answer 1</option>
