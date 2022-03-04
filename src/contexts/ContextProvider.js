@@ -54,6 +54,8 @@ export function ContextProvider({ children }) {
         }
     )
 
+    
+
     function handleQuizDataChange(questionData, questionCount) {
         setQuizData(prevQuizData => {
             return {
@@ -66,8 +68,19 @@ export function ContextProvider({ children }) {
     function updateQuestion(index, newData) {
         const arr = [...quizData.questions]
         arr[index] = newData
+        
+        console.log("Updating: ", arr[index])
 
-        setQuestionData(newData)
+        setQuizData(prevQuizData => {
+            return {
+                ...prevQuizData,
+                questions: arr
+            }
+        })
+
+        // setQuestionData(arr)
+
+        console.log("After update: ", quizData.questions)
     }
 
     function setQuizBasicInfo(title, description) {
@@ -91,6 +104,8 @@ export function ContextProvider({ children }) {
                 [name]: value
             }
         })
+
+        console.log("New question data: ", questionData);
 
         // handleQuizDataChange(questionData)
     }
